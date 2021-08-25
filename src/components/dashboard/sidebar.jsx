@@ -99,7 +99,7 @@ class sidebar extends Component {
 
 	<div class="player">
     <div class="player__cover">
-			<img src={art} alt=""/>
+			<img src={require('/assets/img/covers/calle85.jpeg')} alt=""/>
 		</div>
 
         <div class="player__content">
@@ -111,7 +111,7 @@ class sidebar extends Component {
             title:'calle 85',
             sources:[
                 {
-                    src:song,
+                    src:require('/assets/music/calle-85.mp4'),
                     type:'audio/mp4'
                 }
             ]
