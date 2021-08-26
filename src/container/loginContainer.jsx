@@ -39,8 +39,9 @@ class LoginContainer extends Component {
 									<input id="remember" name="remember" type="checkbox" checked="checked"/>
 									<label for="remember">Remember Me</label>
 								</div>
-								<a class="sign__btn"  href="index.html">
-								<button class="sign__btn" type="button"><Link to="/dashboard">Sign in</Link></button>
+								<a class="sign__btn"  href="" ><Link to="/dashboard">
+								<button class="sign__btn" type="button">Sign in</button>
+								</Link> 
 								</a>
 								<span class="sign__delimiter">or</span>
 								<span class="sign__text">Don't have an account?<a><Link to="/register">Sign up!</Link></a></span>
