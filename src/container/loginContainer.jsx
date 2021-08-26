@@ -40,7 +40,7 @@ class LoginContainer extends Component {
 									<label for="remember">Remember Me</label>
 								</div>
 								<a class="sign__btn"  href="index.html">
-								<button class="sign__btn" type="button">Sign in</button>
+								<button class="sign__btn" type="button"><Link to="/dashboard">Sign in</Link></button>
 								</a>
 								<span class="sign__delimiter">or</span>
 								<span class="sign__text">Don't have an account?<a><Link to="/register">Sign up!</Link></a></span>
