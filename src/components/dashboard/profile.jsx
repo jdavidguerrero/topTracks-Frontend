@@ -123,7 +123,7 @@ class Profile extends Component {
 														<tr>
 															<td>
 																<div class="main__table-img">
-																	<img src={require('../../assets/img/covers/calle85.jpeg')} alt=""/>
+																	<img src="https://img-toptracks.s3.us-east-2.amazonaws.com/calle85.jpeg" alt=""/>
 																</div>
 															</td>	
 															<td>

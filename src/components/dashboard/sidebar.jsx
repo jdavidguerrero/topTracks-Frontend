@@ -99,7 +99,7 @@ class sidebar extends Component {
 
 	<div class="player">
     <div class="player__cover">
-			<img src={require('../../assets/img/covers/calle85.jpeg')} alt=""/>
+			<img src="https://img-toptracks.s3.us-east-2.amazonaws.com/calle85.jpeg" alt=""/>
 		</div>
 
         <div class="player__content">
