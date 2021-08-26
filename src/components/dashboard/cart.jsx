@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { Route, withRouter, Link} from 'react-router-dom';
 import logo  from './../../assets/img/toptracks_logo.png'
-import art from './../../assets/img/covers/calle85.jpeg'
+//import art from './../../assets/img/covers/calle85.jpeg'
 import song from './../../assets/music/calle-85.mp4'
 import { PayPalButton } from "react-paypal-button-v2";
+
+
+const art = require('./../../assets/img/covers/calle85.jpeg')
+
 
 class Cart extends Component {
 
@@ -53,7 +57,7 @@ class Cart extends Component {
 										<tr>
 											<td>
 												<div class="cart__img">
-													<img src={require('./../../assets/img/covers/calle85.jpeg').default} alt=""/>
+													<img src={art} alt=""/>
 												</div>
 											</td>
 											<td><a href="product.html">Calle 85 - Tiago Santo</a></td>
