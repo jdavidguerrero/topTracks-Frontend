@@ -53,7 +53,7 @@ class Cart extends Component {
 										<tr>
 											<td>
 												<div class="cart__img">
-													<img src={'../../assets/img/covers/calle85.jpeg'} alt=""/>
+													<img src={art} alt=""/>
 												</div>
 											</td>
 											<td><a href="product.html">Calle 85 - Tiago Santo</a></td>

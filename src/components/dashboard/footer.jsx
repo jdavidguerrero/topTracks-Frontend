@@ -56,7 +56,7 @@ class footer extends Component {
 						<div class="col-6">
 							<div class="footer__nav">
 					
-								<a href="#">Music</a>-->
+								<a href="#">Music</a>
 								
 							</div>
 						</div>
