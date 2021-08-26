@@ -111,7 +111,7 @@ class sidebar extends Component {
             title:'calle 85',
             sources:[
                 {
-                    src:require('/assets/music/calle-85.mp4'),
+                    src:require('../../assets/music/calle-85.mp4'),
                     type:'audio/mp4'
                 }
             ]
