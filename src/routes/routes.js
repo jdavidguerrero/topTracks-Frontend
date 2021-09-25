@@ -1,8 +1,8 @@
 import cart from "../../components/dashboard/cart";
 import profile from "../../components/dashboard/profile";
 import dashboardContainer from "../../container/dashboardContainer";
-import loginContainer from "../../container/loginContainer";
-import registerContainer from "../../container/registerContainer";
+// import loginContainer from "../../container/loginContainer";
+// import registerContainer from "../../container/registerContainer";
 
 
 

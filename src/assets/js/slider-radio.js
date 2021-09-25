@@ -52,9 +52,9 @@ window.addEventListener('load', function() {
 
 		}
 
-		function updateSlidingPieceCoords(label) {
-			animateSlidingPiece(getElementCoords(label));
-		}
+		// function updateSlidingPieceCoords(label) {
+		// 	animateSlidingPiece(getElementCoords(label));
+		// }
 
 		function animateSlidingPiece(coords) {
 			slidingPiece.style.left = coords.x + "px";
