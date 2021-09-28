@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
-import { PayPalButton } from "react-paypal-button-v2";
+import { PayPalForm } from './../../pages/Paypal'
+
+const value = 50
+const currency = 'USD'
 
 class Cart extends Component {
-
-	constructor(props) {
-		super(props);
-		this.state = {
-		};
-	}
-
-
 	render() {
 		return (
 			<>
@@ -45,7 +40,7 @@ class Cart extends Component {
 													<tr>
 														<td>
 															<div className="cart__img">
-																<img src={require('../../assets/img/covers/calle85.jpeg')} alt="" />
+																<img src={require('./../../assets/img/covers/calle85.jpeg')} alt="" />
 															</div>
 														</td>
 														<td><a href="product.html">Calle 85 - Tiago Santo</a></td>
@@ -60,7 +55,7 @@ class Cart extends Component {
 																</button>
 															</div>
 														</td>
-														<td><span className="cart__price">20%</span></td>
+														<td><span className="cart__price">{value} {currency}</span></td>
 														<td><button className="cart__delete" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg></button></td>
 													</tr>
 
@@ -84,40 +79,10 @@ class Cart extends Component {
 										</div>
 									</div>
 								</div>
-							</div>
+							</div>	
 
-							<div className="col-12 col-lg-4">
-								<PayPalButton
-									createOrder={(data, actions) => {
-										return actions.order.create({
-											purchase_units: [{
-												amount: {
-													currency_code: "USD",
-													value: "0.01"
-												}
-											}],
-											// application_context: {
-											//   shipping_preference: "NO_SHIPPING" // default is "GET_FROM_FILE"
-											// }
-										});
-									}}
-									onApprove={(data, actions) => {
-										// Capture the funds from the transaction
-										return actions.order.capture().then(function (details) {
-											// Show a success message to your buyer
-											alert("Transaction completed by " + details.payer.name.given_name);
+							<PayPalForm value={value} currency={currency} ></PayPalForm>
 
-											// OPTIONAL: Call your server to save the transaction
-											return fetch("/paypal-transaction-complete", {
-												method: "post",
-												body: JSON.stringify({
-													orderID: data.orderID
-												})
-											});
-										});
-									}}
-								/>
-							</div>
 						</div>
 
 					</div>

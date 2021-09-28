@@ -4,10 +4,6 @@ import logo from './../../assets/img/toptracks_logo.png'
 import art from './../../assets/img/covers/calle85.jpeg'
 
 class Profile extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<>

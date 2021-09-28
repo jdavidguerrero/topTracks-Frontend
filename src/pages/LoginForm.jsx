@@ -7,7 +7,6 @@ export const LoginForm = ({ props}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [check, setCheck] = useState(true);
-    // const [cookies, setCookie] = useCookies(['name']);
 
     const handleSubmit = async (event) => {
         event.preventDefault()

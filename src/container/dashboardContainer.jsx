@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, withRouter, Link, Switch} from 'react-router-dom';
-import logo  from './../assets/img/toptracks_logo.png'
-import RouteWithSubRoutes from '../routes/routewithSubRoutes';
-
+import { Route, withRouter, Switch} from 'react-router-dom';
 import Navbar from '../components/dashboard/navbar';
 import Sidebar from '../components/dashboard/sidebar';
 import Footer from '../components/dashboard/footer';
@@ -21,7 +18,7 @@ class DashboardContainer extends Component {
             <Navbar></Navbar>
             <Sidebar></Sidebar>
             <Switch>
-                <Route exact path={`${path}`}  render={props => <Cart {...props }/>} />
+                <Route exact path={`${path}`} render={props => <Cart {...props } />} />
                 <Route exact path={`${path}/profile`}  render={props => <Profile {...props }/>} />
             </Switch>
             <Footer></Footer>

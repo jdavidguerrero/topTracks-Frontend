@@ -4,11 +4,6 @@ import logo from '../../assets/img/toptracks_logo.png'
 import { Logout } from './../../api/authUtil'
 
 class navbar extends Component {
-
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 
 		return (

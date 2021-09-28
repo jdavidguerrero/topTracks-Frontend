@@ -8,10 +8,6 @@ import Plyr from 'plyr-react'
 import './../../assets/css/main.css'
 
 class sidebar extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<>
