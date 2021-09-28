@@ -8,19 +8,13 @@ import Plyr from 'plyr-react'
 import './../../assets/css/main.css'
 
 class sidebar extends Component {
-
 	constructor(props) {
 		super(props);
-		this.state = {
-		};
 	}
 
-
 	render() {
-
 		return (
 			<>
-
 				<div className="sidebar">
 					<div className="sidebar__logo">
 						<img src={logo} alt="" />
@@ -90,16 +84,11 @@ class sidebar extends Component {
 					*/
 						}
 					</ul>
-
 				</div>
-
-
-
 				<div className="player">
 					<div className="player__cover">
 						<img src={require('../../assets/img/covers/calle85.jpeg')} alt="" />
 					</div>
-
 					<div className="player__content">
 						<span className="player__track"><b className="player__title">Calle 85</b> – <span className="player__artist">Thiago Santo</span></span>
 						<Plyr

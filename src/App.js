@@ -26,8 +26,8 @@ function App() {
       
             <Route exact path='/' render={props => <LoginContainer {...props }/>} />
             <Route exact path='/register' render={props => <RegisterContainer {...props }/>} />
-            {/* <Route path='/dashboard' render={props => <DashboardContainer {...props }/>} /> */}
-            <PrivateRoute path='/dashboard' component={DashboardContainer}/>
+            <Route path='/dashboard' render={props => <DashboardContainer {...props }/>} />
+            {/* <PrivateRoute path='/dashboard' component={DashboardContainer}/> */}
         </Router>
       </div>
   );

@@ -7,15 +7,17 @@ export const LoginForm = ({ props}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [check, setCheck] = useState(true);
+    // const [cookies, setCookie] = useCookies(['name']);
 
     const handleSubmit = async (event) => {
         event.preventDefault()
         await loginUser(email, password).then( response => {
             const res = response.response
             if(res.statusCode === 200) {
-                // localStorage.setItem('user', JSON.stringify(res.response));
-                localStorage.setItem('user_dash', JSON.stringify(res.response));
-                // localStorage.setItem('authenticated', true);
+                const user = res.response.User
+                const auth = res.response.authorization
+                localStorage.setItem('user', JSON.stringify(user));
+                localStorage.setItem('auth', auth);
                 props.history.push('/dashboard');
             }
             else {

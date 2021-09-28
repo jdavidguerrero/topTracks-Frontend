@@ -1,3 +1,5 @@
+import { Redirect } from 'react-router';
+
 // Gets the logged in user data from local session 
 export const getLoggedInUser = () => {
     const user = localStorage.getItem('user_dash');
@@ -13,3 +15,12 @@ export const isUserAuthenticated = () => {
     // return getLoggedInUser() !== null;
 }
 
+
+export const Logout = () => {
+    localStorage.removeItem('user');
+    localStorage.removeItem('auth');
+    
+    return (
+        <Redirect to='/' />
+    )
+}

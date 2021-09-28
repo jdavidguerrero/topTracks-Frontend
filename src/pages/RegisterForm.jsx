@@ -36,7 +36,7 @@ export const RegisterForm = () => {
                                     <input type="text" className="sign__input" placeholder="Name" value={name} onChange={e => setName(e.target.value)}/>
                                 </div>
                                 <div className="sign__group">
-                                    <input type="text" className="sign__input" placeholder="Metamask ID" value={metamaskId} onChange={e => setId(e.target.value)}/>
+                                    <input type="text" className="sign__input" placeholder="Ethereum Address (ERC Compatible)" value={metamaskId} onChange={e => setId(e.target.value)}/>
                                 </div>
                                 <div className="sign__group">
                                     <input type="text" className="sign__input" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)}/>
