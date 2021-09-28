@@ -1,6 +1,7 @@
 import { PayPalButton } from "react-paypal-button-v2";
 import { getLoggedInUser } from './../api/authUtil' 
-import { backURL } from './../api/host'
+import { PaymentConfirmation } from './../api/httpRequest'
+
 
 export const PayPalForm = (data) => {
     const user = getLoggedInUser()
@@ -34,13 +35,10 @@ export const PayPalForm = (data) => {
                             alert("Transaction completed by " + details.payer.name.given_name);
 
                             // OPTIONAL: Call your server to save the transaction
-                            return fetch(`${backURL}/master/listen`, {
-                                method: "post",
-                                body: JSON.stringify({
-                                    orderID: data.orderID,
-                                    user
-                                })
-                            });
+                            return PaymentConfirmation({
+                                orderID: data.orderID,
+                                user
+                            })
                         });
                     }}
                 />

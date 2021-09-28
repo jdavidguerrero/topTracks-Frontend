@@ -11,3 +11,8 @@ export const RegisterUser = async (username, password, email, metamaskId )  => {
     const url = `${backURL}/user`;
     return await appFetch({ url, body: JSON.stringify({username, name: username, password: md5(password), email, address_eth: metamaskId}), method: 'POST' });
 };
+
+export const PaymentConfirmation = async data  => {
+    const url = `${backURL}/master/buy`;
+    return await appFetch({ url, body: JSON.stringify(data), method: 'POST' });
+};
