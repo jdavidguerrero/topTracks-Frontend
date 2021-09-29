@@ -50,7 +50,7 @@ export const RegisterForm = () => {
                                 </div> */}
                                 <a className="sign__btn"><button className="sign__btn" type="submit">Sign up</button></a>
                                 <span className="sign__delimiter">or</span>
-                                <span className="sign__text">Already have an account? <a><Link to="/">Sign in!</Link></a></span>
+                                <span className="sign__text">Already have an account? <a href='/#'><Link to="/">Sign in!</Link></a></span>
                             </form>
                         </div>
                     </div>

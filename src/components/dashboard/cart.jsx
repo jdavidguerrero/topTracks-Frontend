@@ -4,7 +4,22 @@ import { PayPalForm } from './../../pages/Paypal'
 const value = 50
 const currency = 'USD'
 
+
 class Cart extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			amount: 1
+		}
+	}
+
+	handleChange = e => {        
+		this.setState({
+			value: e.target.value
+		});
+        this.props.onChange(e);
+    };
+
 	render() {
 		return (
 			<>
@@ -49,7 +64,11 @@ class Cart extends Component {
 																<button type="button">
 																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,11H5a1,1,0,0,0,0,2H19a1,1,0,0,0,0-2Z" /></svg>
 																</button>
-																<input type="text" value="1" />
+																<input 
+																	type="text"
+																	value={this.state.amount}
+																	onChange={this.handleChange}
+																	/>
 																<button type="button">
 																	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z" /></svg>
 																</button>
@@ -67,7 +86,7 @@ class Cart extends Component {
 									<div className="cart__info">
 										<div className="cart__total">
 											<p>Total:</p>
-											<span>USD 50</span>
+											<span>{currency} {value}</span>
 										</div>
 
 
@@ -81,7 +100,7 @@ class Cart extends Component {
 								</div>
 							</div>	
 
-							<PayPalForm value={value} currency={currency} ></PayPalForm>
+							<PayPalForm value={value} currency={currency} amount={this.state.amount} ></PayPalForm>
 
 						</div>
 

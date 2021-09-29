@@ -37,6 +37,7 @@ export const PayPalForm = (data) => {
                             // OPTIONAL: Call your server to save the transaction
                             return PaymentConfirmation({
                                 orderID: data.orderID,
+                                amount: parseInt(data.amount),
                                 user
                             })
                         });

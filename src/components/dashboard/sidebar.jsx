@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import { Route, withRouter, Link } from 'react-router-dom';
 import logo from '../../assets/img/toptracks_logo.png'
-import art from './../../assets/img/covers/calle85.jpeg'
-import song from './../../assets/music/calle-85.mp4'
-
 import Plyr from 'plyr-react'
 import './../../assets/css/main.css'
 

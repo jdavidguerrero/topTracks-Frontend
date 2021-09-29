@@ -7,10 +7,6 @@ import Cart from '../components/dashboard/cart';
 import Profile from '../components/dashboard/profile';
 
 class DashboardContainer extends Component {
-    constructor(props){
-        super(props);
-    }
-
     render(){
         const { path } = this.props.match;
         return(

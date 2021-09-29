@@ -53,7 +53,7 @@ export const LoginForm = ({ props}) => {
                                 </a> */}
                                 <span className="sign__delimiter">or</span>
                                 {/* <span className="sign__text">Don't have an account?<a><Link to="/register">Sign up!</Link></a></span> */}
-                                <span className="sign__text">Don't have an account? <a><Link to="/register">Sign up!</Link></a></span>
+                                <span className="sign__text">Don't have an account? <a href='/#'><Link to="/register">Sign up!</Link></a></span>
                                 <span className="sign__text"><a href="forgot.html">Forgot password?</a></span>
                             </form>
                         </div>
