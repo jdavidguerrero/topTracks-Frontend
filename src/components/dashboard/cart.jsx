@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { PayPalForm } from './../../pages/Paypal'
+import logo from './../../assets/img/covers/calle85.jpeg'
 
 const value = 50
 const currency = 'USD'
-
 
 class Cart extends Component {
 	constructor(props) {
@@ -55,7 +55,8 @@ class Cart extends Component {
 													<tr>
 														<td>
 															<div className="cart__img">
-																<img src={require('./../../assets/img/covers/calle85.jpeg')} alt="" />
+																<img src={logo} alt="Logo" />;
+																{/* <img src={require('./../../assets/img/covers/calle85.jpeg')} alt="" /> */}
 															</div>
 														</td>
 														<td><a href="product.html">Calle 85 - Tiago Santo</a></td>

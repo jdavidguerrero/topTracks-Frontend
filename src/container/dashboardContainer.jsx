@@ -11,8 +11,8 @@ class DashboardContainer extends Component {
         const { path } = this.props.match;
         return(
 			<>
-            <Navbar></Navbar>
-            <Sidebar></Sidebar>
+            <Navbar {...this.props } ></Navbar>
+            <Sidebar {...this.props } ></Sidebar>
             <Switch>
                 <Route exact path={`${path}`} render={props => <Cart {...props } />} />
                 <Route exact path={`${path}/profile`}  render={props => <Profile {...props }/>} />

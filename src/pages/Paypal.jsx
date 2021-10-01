@@ -1,7 +1,6 @@
 import { PayPalButton } from "react-paypal-button-v2";
-import { getLoggedInUser } from './../api/authUtil' 
+import { getLoggedInUser } from './../api/authUtil'
 import { PaymentConfirmation } from './../api/httpRequest'
-
 
 export const PayPalForm = (data) => {
     const user = getLoggedInUser()
@@ -20,22 +19,14 @@ export const PayPalForm = (data) => {
                             }],
                         });
                     }}
-                    // options={{
-                    //     clientId:
-                    //       "access_token$sandbox$4ywx9d2bmdmk3b9f$903618724c8478bd91c60161db66a1f3"
-                    // }}
-                    // onSuccess={(data) => {
-                    //     console.log('dat');
-                    //     alert('HOli funciono te llamo desde la prisión')
-                    // }}
                     onApprove={(data, actions) => {
                         // Capture the funds from the transaction
                         return actions.order.capture().then( (details) => {
                             // Show a success message to your buyer
                             alert("Transaction completed by " + details.payer.name.given_name);
 
-                            // OPTIONAL: Call your server to save the transaction
                             return PaymentConfirmation({
+                                idMaster: 'c3a4b710-2251-11ec-9046-79c7b4f508e8',
                                 orderID: data.orderID,
                                 amount: parseInt(data.amount),
                                 user

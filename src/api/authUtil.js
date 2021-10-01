@@ -14,11 +14,8 @@ export const isUserAuthenticated = () => {
 }
 
 
-export const Logout = () => {
+export const Logout = (props) => {
     localStorage.removeItem('user');
     localStorage.removeItem('auth');
-    
-    return (
-        <Redirect to='/' />
-    )
+    props.history.push('/')
 }
