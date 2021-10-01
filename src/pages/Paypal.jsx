@@ -28,7 +28,7 @@ export const PayPalForm = (data) => {
                             return PaymentConfirmation({
                                 idMaster: 'c3a4b710-2251-11ec-9046-79c7b4f508e8',
                                 orderID: data.orderID,
-                                amount: parseInt(data.amount),
+                                amount: data.amount ? parseInt(data.amount) : 1,
                                 user
                             })
                         });

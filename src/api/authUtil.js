@@ -1,4 +1,3 @@
-import { Redirect } from 'react-router';
 
 // Gets the logged in user data from local session 
 export const getLoggedInUser = () => {
