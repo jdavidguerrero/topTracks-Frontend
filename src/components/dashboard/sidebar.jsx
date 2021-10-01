@@ -82,7 +82,7 @@ class sidebar extends Component {
 						<img src={require('../../assets/img/covers/calle85.jpeg')} alt="" />
 					</div>
 					<div className="player__content">
-						<span className="player__track"><b className="player__title">Calle 85</b> – <span className="player__artist">Thiago Santo</span></span>
+						<span className="player__track"><b className="player__title">Calle 85</b> – <span className="player__artist">Tiago Santo</span></span>
 						<Plyr
 							source={
 								{
