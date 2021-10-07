@@ -12,7 +12,6 @@ export const LoginForm = ({ props}) => {
         event.preventDefault()
         await loginUser(email, password).then( response => {
             const res = response.response
-            console.log(res);
             if(res.statusCode === 200) {
                 const user = res.response.User
                 const auth = res.response.authorization
